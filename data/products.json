@@ -1,0 +1,1163 @@
+[
+  {
+    "code": "NR-LO-01",
+    "slug": "lo-12-h-v",
+    "category": "lines-only",
+    "nameAr": "لوحة خطوط 12 خط أفقي / رأسي",
+    "nameEn": "12-Line Panel – Horizontal / Vertical",
+    "dimensions": {
+      "h": 350,
+      "w": 270,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/1987bcb0-b8c8-458b-a4d4-748b799f375d-1.clean.webp"
+    ],
+    "drawing": "/media/products/1987bcb0-b8c8-458b-a4d4-748b799f375d-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-12-h-v + datasheet-4vph-blue.vercel.app (id 1987bcb0-b8c8-458b-a4d4-748b799f375d)"
+  },
+  {
+    "code": "NR-LO-02",
+    "slug": "lo-14-2rows",
+    "category": "lines-only",
+    "nameAr": "لوحة خطوط 14 خط صفين",
+    "nameEn": "14-Line Panel – Two Rows",
+    "dimensions": {
+      "h": 350,
+      "w": 270,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/3e5e3a07-94be-4c8d-bb1b-4de7db2d26e4-1.clean.webp"
+    ],
+    "drawing": "/media/products/3e5e3a07-94be-4c8d-bb1b-4de7db2d26e4-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-14-2rows + datasheet-4vph-blue.vercel.app (id 3e5e3a07-94be-4c8d-bb1b-4de7db2d26e4)"
+  },
+  {
+    "code": "NR-LO-03",
+    "slug": "lo-16-3p",
+    "category": "lines-only",
+    "nameAr": "لوحة 16 خط 3 فاز بالعمومي",
+    "nameEn": "16-Line 3-Phase Panel with Main Breaker",
+    "dimensions": {
+      "h": 390,
+      "w": 330,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/b4aefce3-ba4d-4202-a098-561994fe8e42-1.clean.webp"
+    ],
+    "drawing": "/media/products/b4aefce3-ba4d-4202-a098-561994fe8e42-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-16-3p + datasheet-4vph-blue.vercel.app (id b4aefce3-ba4d-4202-a098-561994fe8e42)"
+  },
+  {
+    "code": "NR-LO-04",
+    "slug": "lo-12-omega-mobile",
+    "category": "lines-only",
+    "nameAr": "لوحة 12 خط بالقاطع أوميجا متحركة",
+    "nameEn": "12-Line Panel with Breaker – Movable Omega Rail",
+    "dimensions": {
+      "h": 360,
+      "w": 360,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/e6655d55-f533-4138-a57a-4d4af300d51c-1.clean.webp"
+    ],
+    "drawing": "/media/products/e6655d55-f533-4138-a57a-4d4af300d51c-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-12-omega-mobile + datasheet-4vph-blue.vercel.app (id e6655d55-f533-4138-a57a-4d4af300d51c)"
+  },
+  {
+    "code": "NR-LO-05",
+    "slug": "lo-18-omega-mobile",
+    "category": "lines-only",
+    "nameAr": "لوحة 18 خط أوميجا متحركة",
+    "nameEn": "18-Line Panel – Movable Omega Rail",
+    "dimensions": {
+      "h": 360,
+      "w": 360,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/f775ea9c-7a6a-4e7c-bf67-4af22ef25c0d-1.clean.webp"
+    ],
+    "drawing": null,
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-18-omega-mobile + datasheet-4vph-blue.vercel.app (id f775ea9c-7a6a-4e7c-bf67-4af22ef25c0d)"
+  },
+  {
+    "code": "NR-LO-06",
+    "slug": "lo-18-3p-general",
+    "category": "lines-only",
+    "nameAr": "لوحة 18 خط 3 فاز بالعمومي",
+    "nameEn": "18-Line 3-Phase Panel with Main Breaker",
+    "dimensions": {
+      "h": 490,
+      "w": 270,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/c2ad0b63-cb72-481d-ab9e-2a751f0f81b5-1.clean.webp"
+    ],
+    "drawing": "/media/products/c2ad0b63-cb72-481d-ab9e-2a751f0f81b5-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-18-3p-general + datasheet-4vph-blue.vercel.app (id c2ad0b63-cb72-481d-ab9e-2a751f0f81b5)"
+  },
+  {
+    "code": "NR-LO-07",
+    "slug": "lo-24-3p",
+    "category": "lines-only",
+    "nameAr": "لوحة 24 خط 3 فاز بالعمومي",
+    "nameEn": "24-Line 3-Phase Panel with Main Breaker (490 mm)",
+    "dimensions": {
+      "h": 490,
+      "w": 270,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/36b36dc3-0798-4273-9d4a-d8cea948e442-1.clean.webp"
+    ],
+    "drawing": "/media/products/36b36dc3-0798-4273-9d4a-d8cea948e442-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-24-3p + datasheet-4vph-blue.vercel.app (id 36b36dc3-0798-4273-9d4a-d8cea948e442)"
+  },
+  {
+    "code": "NR-LO-08",
+    "slug": "lo-24-lines",
+    "category": "lines-only",
+    "nameAr": "لوحة خطوط 24 خط",
+    "nameEn": "24-Line Panel",
+    "dimensions": {
+      "h": 490,
+      "w": 270,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/1cbc9600-37da-4fba-855c-b3ef9522d1c5-1.clean.webp"
+    ],
+    "drawing": "/media/products/1cbc9600-37da-4fba-855c-b3ef9522d1c5-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-24-lines + datasheet-4vph-blue.vercel.app (id 1cbc9600-37da-4fba-855c-b3ef9522d1c5)"
+  },
+  {
+    "code": "NR-LO-09",
+    "slug": "lo-18-3p-fixed",
+    "category": "lines-only",
+    "nameAr": "لوحة 18 خط 3 فاز بالعمومي أوميجا ثابتة",
+    "nameEn": "18-Line 3-Phase Panel with Main Breaker – Fixed Omega Rail",
+    "dimensions": {
+      "h": 440,
+      "w": 350,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/eefb1bc3-1d14-495f-949f-3748e4f48467-1.clean.webp"
+    ],
+    "drawing": "/media/products/eefb1bc3-1d14-495f-949f-3748e4f48467-drawing.webp",
+    "featured": true,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-18-3p-fixed + datasheet-4vph-blue.vercel.app (id eefb1bc3-1d14-495f-949f-3748e4f48467)"
+  },
+  {
+    "code": "NR-LO-10",
+    "slug": "lo-24-3p-omega",
+    "category": "lines-only",
+    "nameAr": "لوحة 24 خط 3 فاز بالعمومي",
+    "nameEn": "24-Line 3-Phase Panel with Main Breaker (470 mm)",
+    "dimensions": {
+      "h": 470,
+      "w": 350,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/7430d656-51f7-4285-8e99-42bd961bd05d-1.clean.webp"
+    ],
+    "drawing": "/media/products/7430d656-51f7-4285-8e99-42bd961bd05d-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-24-3p-omega + datasheet-4vph-blue.vercel.app (id 7430d656-51f7-4285-8e99-42bd961bd05d)"
+  },
+  {
+    "code": "NR-LO-11",
+    "slug": "lo-36-omega-mobile",
+    "category": "lines-only",
+    "nameAr": "لوحة 36 خط 3 فاز بالعمومي أوميجا متحركة",
+    "nameEn": "36-Line 3-Phase Panel with Main Breaker – Movable Omega Rail",
+    "dimensions": {
+      "h": 620,
+      "w": 360,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/3800c7d9-1deb-4c04-9735-6fef3f3c47a4-1.clean.webp"
+    ],
+    "drawing": "/media/products/3800c7d9-1deb-4c04-9735-6fef3f3c47a4-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lo-36-omega-mobile + datasheet-4vph-blue.vercel.app (id 3800c7d9-1deb-4c04-9735-6fef3f3c47a4)"
+  },
+  {
+    "code": "NR-MO-01",
+    "slug": "mo-220-card",
+    "category": "meter-only",
+    "nameAr": "لوحة عداد 220V كارت شحن",
+    "nameEn": "220V Prepaid-Card Meter Panel",
+    "dimensions": {
+      "h": 350,
+      "w": 270,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/32e60e04-e190-4fa6-b442-fd686fd6ca47-1.clean.webp"
+    ],
+    "drawing": "/media/products/32e60e04-e190-4fa6-b442-fd686fd6ca47-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-220-card + datasheet-4vph-blue.vercel.app (id 32e60e04-e190-4fa6-b442-fd686fd6ca47)"
+  },
+  {
+    "code": "NR-MO-02",
+    "slug": "mo-220-factories",
+    "category": "meter-only",
+    "nameAr": "لوحة عداد 220V مصانع",
+    "nameEn": "220V Meter Panel – Factories",
+    "dimensions": {
+      "h": 350,
+      "w": 270,
+      "d": 120
+    },
+    "material": null,
+    "images": [
+      "/media/products/3c53c23e-c37a-42f7-8a70-a6e3ce8b1132-1.clean.webp"
+    ],
+    "drawing": "/media/products/3c53c23e-c37a-42f7-8a70-a6e3ce8b1132-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-220-factories + datasheet-4vph-blue.vercel.app (id 3c53c23e-c37a-42f7-8a70-a6e3ce8b1132)"
+  },
+  {
+    "code": "NR-MO-03",
+    "slug": "mo-3p-factories",
+    "category": "meter-only",
+    "nameAr": "لوحة عداد 3 فاز مصانع",
+    "nameEn": "3-Phase Meter Panel – Factories",
+    "dimensions": {
+      "h": 390,
+      "w": 330,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/a8286304-eadf-4413-aba0-44fe2e481ab1-1.clean.webp"
+    ],
+    "drawing": "/media/products/a8286304-eadf-4413-aba0-44fe2e481ab1-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-3p-factories + datasheet-4vph-blue.vercel.app (id a8286304-eadf-4413-aba0-44fe2e481ab1)"
+  },
+  {
+    "code": "NR-MO-04",
+    "slug": "mo-3p-card",
+    "category": "meter-only",
+    "nameAr": "لوحة عداد 3 فاز كارت شحن",
+    "nameEn": "3-Phase Prepaid-Card Meter Panel",
+    "dimensions": {
+      "h": 490,
+      "w": 270,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/9b448f16-a968-436f-8b81-a3b394a32944-1.clean.webp"
+    ],
+    "drawing": "/media/products/9b448f16-a968-436f-8b81-a3b394a32944-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-3p-card + datasheet-4vph-blue.vercel.app (id 9b448f16-a968-436f-8b81-a3b394a32944)"
+  },
+  {
+    "code": "NR-MO-05",
+    "slug": "mo-2card-3p",
+    "category": "meter-only",
+    "nameAr": "لوحة عداد كارت شحن 2 / 3 فاز",
+    "nameEn": "Prepaid-Card Meter Panel – 2 / 3 Phase",
+    "dimensions": {
+      "h": 440,
+      "w": 350,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/29f2a354-4052-42b9-a1ac-0655b3d8ac01-1.clean.webp"
+    ],
+    "drawing": "/media/products/29f2a354-4052-42b9-a1ac-0655b3d8ac01-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-2card-3p + datasheet-4vph-blue.vercel.app (id 29f2a354-4052-42b9-a1ac-0655b3d8ac01)"
+  },
+  {
+    "code": "NR-MO-06",
+    "slug": "mo-3-switches",
+    "category": "meter-only",
+    "nameAr": "لوحة عداد 3 مفاتيح قاطع + لمبات إشارة",
+    "nameEn": "Meter Panel with 3 Breakers + Indicator Lamps",
+    "dimensions": {
+      "h": 590,
+      "w": 375,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/0612dbfc-aef5-4b96-98dc-0d457b5f1d54-1.clean.webp"
+    ],
+    "drawing": "/media/products/0612dbfc-aef5-4b96-98dc-0d457b5f1d54-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-3-switches + datasheet-4vph-blue.vercel.app (id 0612dbfc-aef5-4b96-98dc-0d457b5f1d54)"
+  },
+  {
+    "code": "NR-MO-07",
+    "slug": "mo-4-switches",
+    "category": "meter-only",
+    "nameAr": "لوحة عداد 4 مفاتيح قاطع + لمبات إشارة",
+    "nameEn": "Meter Panel with 4 Breakers + Indicator Lamps",
+    "dimensions": {
+      "h": 590,
+      "w": 475,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/c358e3cc-bd54-4ac3-a147-e5df7add09b8-1.clean.webp"
+    ],
+    "drawing": "/media/products/c358e3cc-bd54-4ac3-a147-e5df7add09b8-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-4-switches + datasheet-4vph-blue.vercel.app (id c358e3cc-bd54-4ac3-a147-e5df7add09b8)"
+  },
+  {
+    "code": "NR-MO-08",
+    "slug": "mo-6-switches",
+    "category": "meter-only",
+    "nameAr": "لوحة عداد 6 مفاتيح قاطع + لمبات إشارة",
+    "nameEn": "Meter Panel with 6 Breakers + Indicator Lamps",
+    "dimensions": {
+      "h": 590,
+      "w": 575,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/5b41ec7f-fc3a-4813-9d6f-1edf90c92504-1.clean.webp"
+    ],
+    "drawing": "/media/products/5b41ec7f-fc3a-4813-9d6f-1edf90c92504-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-6-switches + datasheet-4vph-blue.vercel.app (id 5b41ec7f-fc3a-4813-9d6f-1edf90c92504)"
+  },
+  {
+    "code": "NR-MO-09",
+    "slug": "mo-8-switches",
+    "category": "meter-only",
+    "nameAr": "لوحة عداد 8 مفاتيح قاطع + لمبات إشارة",
+    "nameEn": "Meter Panel with 8 Breakers + Indicator Lamps",
+    "dimensions": {
+      "h": 590,
+      "w": 775,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/a756e76b-5e34-459f-a9fd-2b3de51d80ab-1.clean.webp"
+    ],
+    "drawing": "/media/products/a756e76b-5e34-459f-a9fd-2b3de51d80ab-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-8-switches + datasheet-4vph-blue.vercel.app (id a756e76b-5e34-459f-a9fd-2b3de51d80ab)"
+  },
+  {
+    "code": "NR-MO-10",
+    "slug": "mo-10meter",
+    "category": "meter-only",
+    "nameAr": "لوحة 10 عداد + مفاتيح قاطع + لمبات إشارة",
+    "nameEn": "10-Meter Panel with Breakers + Indicator Lamps",
+    "dimensions": {
+      "h": 750,
+      "w": 790,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/874bdfe1-5a8f-4af0-a586-c14efb17dc1d-1.clean.webp"
+    ],
+    "drawing": "/media/products/874bdfe1-5a8f-4af0-a586-c14efb17dc1d-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-10meter + datasheet-4vph-blue.vercel.app (id 874bdfe1-5a8f-4af0-a586-c14efb17dc1d)"
+  },
+  {
+    "code": "NR-MO-11",
+    "slug": "mo-12meter",
+    "category": "meter-only",
+    "nameAr": "لوحة 12 عداد + مفاتيح قاطع + لمبات إشارة",
+    "nameEn": "12-Meter Panel with Breakers + Indicator Lamps",
+    "dimensions": {
+      "h": 880,
+      "w": 790,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/1997b8ee-7d01-4103-bc3a-39d5f4f45ebc-1.clean.webp"
+    ],
+    "drawing": "/media/products/1997b8ee-7d01-4103-bc3a-39d5f4f45ebc-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/mo-12meter + datasheet-4vph-blue.vercel.app (id 1997b8ee-7d01-4103-bc3a-39d5f4f45ebc)"
+  },
+  {
+    "code": "NR-LM-01",
+    "slug": "lm-220-triple",
+    "category": "lines-meter",
+    "nameAr": "لوحة عداد 220 فولت مفتاح ثلاثي",
+    "nameEn": "220V Meter Panel with Triple Switch",
+    "dimensions": {
+      "h": 350,
+      "w": 270,
+      "d": 115
+    },
+    "material": null,
+    "images": [
+      "/media/products/8ae8f649-de0c-4312-9ab4-7581703be964-1.clean.webp"
+    ],
+    "drawing": "/media/products/8ae8f649-de0c-4312-9ab4-7581703be964-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lm-220-triple + datasheet-4vph-blue.vercel.app (id 8ae8f649-de0c-4312-9ab4-7581703be964)"
+  },
+  {
+    "code": "NR-LM-02",
+    "slug": "lm-12-outside",
+    "category": "lines-meter",
+    "nameAr": "لوحة 12 خط بالعداد خارج الشقة",
+    "nameEn": "12-Line Panel with Meter (Outside Apartment)",
+    "dimensions": {
+      "h": 360,
+      "w": 360,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/401f8409-4843-4331-9d82-8d21fb88342b-1.clean.webp"
+    ],
+    "drawing": "/media/products/401f8409-4843-4331-9d82-8d21fb88342b-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lm-12-outside + datasheet-4vph-blue.vercel.app (id 401f8409-4843-4331-9d82-8d21fb88342b)"
+  },
+  {
+    "code": "NR-LM-03",
+    "slug": "lm-meter-double-switch",
+    "category": "lines-meter",
+    "nameAr": "لوحة عداد + مفتاح ثنائي",
+    "nameEn": "Meter Panel with Double Switch",
+    "dimensions": {
+      "h": 390,
+      "w": 330,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/b5202165-74cb-4179-808b-e8dff28030bf-1.clean.webp",
+      "/media/products/b5202165-74cb-4179-808b-e8dff28030bf-2.jpeg"
+    ],
+    "drawing": "/media/products/b5202165-74cb-4179-808b-e8dff28030bf-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/لوحة-عداد-مفتاح-ثنائي + datasheet-4vph-blue.vercel.app (id b5202165-74cb-4179-808b-e8dff28030bf)"
+  },
+  {
+    "code": "NR-LM-04",
+    "slug": "lm-12-inside",
+    "category": "lines-meter",
+    "nameAr": "لوحة 12 خط بالعداد داخل الشقة",
+    "nameEn": "12-Line Panel with Meter (Inside Apartment)",
+    "dimensions": {
+      "h": 360,
+      "w": 360,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/d8854918-8786-4094-a259-cbc856d34cfb-1.clean.webp"
+    ],
+    "drawing": "/media/products/d8854918-8786-4094-a259-cbc856d34cfb-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lm-12-inside + datasheet-4vph-blue.vercel.app (id d8854918-8786-4094-a259-cbc856d34cfb)"
+  },
+  {
+    "code": "NR-LM-05",
+    "slug": "lm-14-card-charger",
+    "category": "lines-meter",
+    "nameAr": "لوحة 14 خط بالعداد كارت شحن",
+    "nameEn": "14-Line Panel with Prepaid-Card Meter",
+    "dimensions": {
+      "h": 490,
+      "w": 270,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/150afb20-3c49-4c42-bba3-5863ffaa1712-1.clean.webp"
+    ],
+    "drawing": "/media/products/150afb20-3c49-4c42-bba3-5863ffaa1712-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lm-14-card-charger + datasheet-4vph-blue.vercel.app (id 150afb20-3c49-4c42-bba3-5863ffaa1712)"
+  },
+  {
+    "code": "NR-LM-06",
+    "slug": "lm-3phase-card-general",
+    "category": "lines-meter",
+    "nameAr": "لوحة 3 فاز كارت شحن بالعمومي",
+    "nameEn": "3-Phase Prepaid-Card Panel with Main Breaker",
+    "dimensions": {
+      "h": 490,
+      "w": 270,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/f0ee6831-e6d2-4883-9ec3-23b5ddcd7175-1.clean.webp"
+    ],
+    "drawing": "/media/products/f0ee6831-e6d2-4883-9ec3-23b5ddcd7175-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lm-3phase-card-general + datasheet-4vph-blue.vercel.app (id f0ee6831-e6d2-4883-9ec3-23b5ddcd7175)"
+  },
+  {
+    "code": "NR-LM-07",
+    "slug": "lm-16-omega-fixed",
+    "category": "lines-meter",
+    "nameAr": "لوحة 16 خط بالعداد أوميجا ثابتة",
+    "nameEn": "16-Line Panel with Meter – Fixed Omega Rail",
+    "dimensions": {
+      "h": 440,
+      "w": 350,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/f614b72d-c0d8-43a8-b578-89bb20fea6e9-1.clean.webp"
+    ],
+    "drawing": "/media/products/f614b72d-c0d8-43a8-b578-89bb20fea6e9-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lm-16-omega-fixed + datasheet-4vph-blue.vercel.app (id f614b72d-c0d8-43a8-b578-89bb20fea6e9)"
+  },
+  {
+    "code": "NR-LM-08",
+    "slug": "lm-16-omega-mobile",
+    "category": "lines-meter",
+    "nameAr": "لوحة 16 خط بالعداد أوميجا متحركة",
+    "nameEn": "16-Line Panel with Meter – Movable Omega Rail",
+    "dimensions": {
+      "h": 440,
+      "w": 350,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/f7cd0357-72c4-430d-864e-62a8cb65f2bf-1.clean.webp"
+    ],
+    "drawing": "/media/products/f7cd0357-72c4-430d-864e-62a8cb65f2bf-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lm-16-omega-mobile + datasheet-4vph-blue.vercel.app (id f7cd0357-72c4-430d-864e-62a8cb65f2bf)"
+  },
+  {
+    "code": "NR-LM-09",
+    "slug": "lm-18-card-charger",
+    "category": "lines-meter",
+    "nameAr": "لوحة 18 خط بالعداد 3 فاز كارت شحن",
+    "nameEn": "18-Line 3-Phase Panel with Prepaid-Card Meter",
+    "dimensions": {
+      "h": 440,
+      "w": 350,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/7762fd83-195f-4940-89a8-9ed4dec56632-1.clean.webp"
+    ],
+    "drawing": "/media/products/7762fd83-195f-4940-89a8-9ed4dec56632-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lm-18-card-charger + datasheet-4vph-blue.vercel.app (id 7762fd83-195f-4940-89a8-9ed4dec56632)"
+  },
+  {
+    "code": "NR-LM-10",
+    "slug": "lm-24-card-mobile",
+    "category": "lines-meter",
+    "nameAr": "لوحة 24 خط بالعداد 3 فاز كارت شحن أوميجا متحركة",
+    "nameEn": "24-Line 3-Phase Prepaid-Card Meter Panel – Movable Omega Rail",
+    "dimensions": {
+      "h": 620,
+      "w": 360,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/a46cf2ff-ccb9-4237-b4b9-171195f34a5e-1.clean.webp"
+    ],
+    "drawing": "/media/products/a46cf2ff-ccb9-4237-b4b9-171195f34a5e-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/lm-24-card-mobile + datasheet-4vph-blue.vercel.app (id a46cf2ff-ccb9-4237-b4b9-171195f34a5e)"
+  },
+  {
+    "code": "NR-SP-01",
+    "slug": "smart-40x40",
+    "category": "smart-panels",
+    "nameAr": "لوحة سمارت 40×40×12",
+    "nameEn": "Smart Panel 40×40×12",
+    "dimensions": {
+      "h": 400,
+      "w": 400,
+      "d": 120
+    },
+    "material": null,
+    "images": [
+      "/media/products/d23e4e32-c354-483f-a109-7028ddc42dec-1.clean.webp"
+    ],
+    "drawing": null,
+    "featured": true,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/smart-40x40 + datasheet-4vph-blue.vercel.app (id d23e4e32-c354-483f-a109-7028ddc42dec)"
+  },
+  {
+    "code": "NR-SP-02",
+    "slug": "smart-40x60",
+    "category": "smart-panels",
+    "nameAr": "لوحة سمارت 40×60×12",
+    "nameEn": "Smart Panel 40×60×12",
+    "dimensions": {
+      "h": 400,
+      "w": 600,
+      "d": 120
+    },
+    "material": null,
+    "images": [
+      "/media/products/be86f988-ceb1-451d-8880-4d31fbb93850-1.clean.webp"
+    ],
+    "drawing": null,
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/smart-40x60 + datasheet-4vph-blue.vercel.app (id be86f988-ceb1-451d-8880-4d31fbb93850)"
+  },
+  {
+    "code": "NR-SP-03",
+    "slug": "smart-40x80",
+    "category": "smart-panels",
+    "nameAr": "لوحة سمارت 40×80×12",
+    "nameEn": "Smart Panel 40×80×12",
+    "dimensions": {
+      "h": 400,
+      "w": 800,
+      "d": 120
+    },
+    "material": null,
+    "images": [
+      "/media/products/c7249ab7-666b-4269-91ae-26775c45c792-1.clean.webp"
+    ],
+    "drawing": null,
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/smart-40x80 + datasheet-4vph-blue.vercel.app (id c7249ab7-666b-4269-91ae-26775c45c792)"
+  },
+  {
+    "code": "NR-SP-04",
+    "slug": "smart-60x80",
+    "category": "smart-panels",
+    "nameAr": "لوحة سمارت 60×80×12",
+    "nameEn": "Smart Panel 60×80×12",
+    "dimensions": {
+      "h": 600,
+      "w": 800,
+      "d": 120
+    },
+    "material": null,
+    "images": [
+      "/media/products/d18baa6f-7478-40c9-8462-9a1110de27d9-1.clean.webp"
+    ],
+    "drawing": null,
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/smart-60x80 + datasheet-4vph-blue.vercel.app (id d18baa6f-7478-40c9-8462-9a1110de27d9)"
+  },
+  {
+    "code": "NR-CP-01",
+    "slug": "comm-horizontal",
+    "category": "communications",
+    "nameAr": "لوحة اتصالات أفقي",
+    "nameEn": "Communication Panel – Horizontal",
+    "dimensions": {
+      "h": 455,
+      "w": 350,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/4329e3dc-8534-4e36-94d9-1f69ea4a64c0-1.clean.webp"
+    ],
+    "drawing": "/media/products/4329e3dc-8534-4e36-94d9-1f69ea4a64c0-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/comm-horizontal + datasheet-4vph-blue.vercel.app (id 4329e3dc-8534-4e36-94d9-1f69ea4a64c0)"
+  },
+  {
+    "code": "NR-CP-02",
+    "slug": "comm-vertical",
+    "category": "communications",
+    "nameAr": "لوحة اتصالات رأسي",
+    "nameEn": "Communication Panel – Vertical",
+    "dimensions": {
+      "h": 455,
+      "w": 350,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/acaad5cc-b8d0-4b8e-a6a0-292257630d1d-1.clean.webp"
+    ],
+    "drawing": "/media/products/acaad5cc-b8d0-4b8e-a6a0-292257630d1d-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/comm-vertical + datasheet-4vph-blue.vercel.app (id acaad5cc-b8d0-4b8e-a6a0-292257630d1d)"
+  },
+  {
+    "code": "NR-CP-03",
+    "slug": "comm-plastic-front",
+    "category": "communications",
+    "nameAr": "لوحة اتصالات وش بلاستيك",
+    "nameEn": "Communication Panel – Plastic Front",
+    "dimensions": {
+      "h": 455,
+      "w": 350,
+      "d": 90
+    },
+    "material": null,
+    "images": [
+      "/media/products/bcb54107-948d-4bfc-b26f-e820a8a0cd4c-1.clean.webp"
+    ],
+    "drawing": "/media/products/bcb54107-948d-4bfc-b26f-e820a8a0cd4c-drawing.webp",
+    "featured": true,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/comm-plastic-front + datasheet-4vph-blue.vercel.app (id bcb54107-948d-4bfc-b26f-e820a8a0cd4c)"
+  },
+  {
+    "code": "NR-JB-01",
+    "slug": "jb-10x25x20",
+    "category": "junction-boxes",
+    "nameAr": "بواط مقاس 10×25×20",
+    "nameEn": "Junction Box 10×25×20 cm",
+    "dimensions": {
+      "h": 220,
+      "w": 270,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/82cbf8f3-f2dc-495f-818e-9f18daf96375-1.clean.webp"
+    ],
+    "drawing": "/media/products/82cbf8f3-f2dc-495f-818e-9f18daf96375-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/jb-10x25x20 + datasheet-4vph-blue.vercel.app (id 82cbf8f3-f2dc-495f-818e-9f18daf96375)"
+  },
+  {
+    "code": "NR-JB-02",
+    "slug": "jb-10x30x30",
+    "category": "junction-boxes",
+    "nameAr": "بواط مقاس 10×30×30",
+    "nameEn": "Junction Box 10×30×30 cm",
+    "dimensions": {
+      "h": 315,
+      "w": 315,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/95230f20-968e-47ed-80df-decda65d13fc-1.clean.webp"
+    ],
+    "drawing": null,
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/jb-10x30x30 + datasheet-4vph-blue.vercel.app (id 95230f20-968e-47ed-80df-decda65d13fc)"
+  },
+  {
+    "code": "NR-JB-03",
+    "slug": "jb-10x40x30",
+    "category": "junction-boxes",
+    "nameAr": "بواط مقاس 10×40×30",
+    "nameEn": "Junction Box 10×40×30 cm",
+    "dimensions": {
+      "h": 410,
+      "w": 310,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/3f2a0a25-4452-4c30-800c-97b9bcdffe92-1.clean.webp"
+    ],
+    "drawing": "/media/products/3f2a0a25-4452-4c30-800c-97b9bcdffe92-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/jb-10x40x30 + datasheet-4vph-blue.vercel.app (id 3f2a0a25-4452-4c30-800c-97b9bcdffe92)"
+  },
+  {
+    "code": "NR-JB-04",
+    "slug": "jb-10x50x30",
+    "category": "junction-boxes",
+    "nameAr": "بواط مقاس 10×50×30",
+    "nameEn": "Junction Box 10×50×30 cm",
+    "dimensions": {
+      "h": 510,
+      "w": 310,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/78c3186f-3f63-4214-aa2f-3708d9e9d7c7-1.clean.webp"
+    ],
+    "drawing": "/media/products/78c3186f-3f63-4214-aa2f-3708d9e9d7c7-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/بواط-مقاس-30-50-10-سم + datasheet-4vph-blue.vercel.app (id 78c3186f-3f63-4214-aa2f-3708d9e9d7c7)"
+  },
+  {
+    "code": "NR-JB-05",
+    "slug": "jb-10x40x40",
+    "category": "junction-boxes",
+    "nameAr": "بواط مقاس 10×40×40",
+    "nameEn": "Junction Box 10×40×40 cm",
+    "dimensions": {
+      "h": 415,
+      "w": 415,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/2344d590-c39d-4e2f-bba0-2fb1a4a30f52-1.clean.webp"
+    ],
+    "drawing": "/media/products/2344d590-c39d-4e2f-bba0-2fb1a4a30f52-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/jb-10x40x40 + datasheet-4vph-blue.vercel.app (id 2344d590-c39d-4e2f-bba0-2fb1a4a30f52)"
+  },
+  {
+    "code": "NR-JB-06",
+    "slug": "jb-10x60x30",
+    "category": "junction-boxes",
+    "nameAr": "بواط مقاس 10×60×30",
+    "nameEn": "Junction Box 10×60×30 cm",
+    "dimensions": {
+      "h": 610,
+      "w": 310,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/9846a967-38ea-4c7e-877e-bf2cfb1699a9-1.clean.webp"
+    ],
+    "drawing": "/media/products/9846a967-38ea-4c7e-877e-bf2cfb1699a9-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/بواط-مقاس-30-60-10-سم + datasheet-4vph-blue.vercel.app (id 9846a967-38ea-4c7e-877e-bf2cfb1699a9)"
+  },
+  {
+    "code": "NR-JB-07",
+    "slug": "jb-10x70x30",
+    "category": "junction-boxes",
+    "nameAr": "بواط مقاس 10×70×30",
+    "nameEn": "Junction Box 10×70×30 cm",
+    "dimensions": {
+      "h": 710,
+      "w": 310,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/9ee98e23-819a-41de-9155-a8759fecb2df-1.clean.webp"
+    ],
+    "drawing": "/media/products/9ee98e23-819a-41de-9155-a8759fecb2df-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/jb-10x70x30 + datasheet-4vph-blue.vercel.app (id 9ee98e23-819a-41de-9155-a8759fecb2df)"
+  },
+  {
+    "code": "NR-JB-08",
+    "slug": "jb-12x50x50",
+    "category": "junction-boxes",
+    "nameAr": "بواط مقاس 12×50×50",
+    "nameEn": "Junction Box 12×50×50 cm",
+    "dimensions": {
+      "h": 525,
+      "w": 525,
+      "d": 110
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/370943e7-b01d-4806-84e2-db64399ccd09-1.clean.webp"
+    ],
+    "drawing": "/media/products/370943e7-b01d-4806-84e2-db64399ccd09-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/jb-12x50x50 + datasheet-4vph-blue.vercel.app (id 370943e7-b01d-4806-84e2-db64399ccd09)"
+  },
+  {
+    "code": "NR-NB-01",
+    "slug": "nb-10x25x20",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×25×20",
+    "nameEn": "Nail Box 10×25×20 cm",
+    "dimensions": {
+      "h": 250,
+      "w": 210,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/d6747c77-3037-457d-bf2f-f6a025ac452b-1.clean.webp"
+    ],
+    "drawing": "/media/products/d6747c77-3037-457d-bf2f-f6a025ac452b-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x25x20 + datasheet-4vph-blue.vercel.app (id d6747c77-3037-457d-bf2f-f6a025ac452b)"
+  },
+  {
+    "code": "NR-NB-02",
+    "slug": "nb-10x30x20",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×30×20",
+    "nameEn": "Nail Box 10×30×20 cm",
+    "dimensions": {
+      "h": 310,
+      "w": 210,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/5f2b48a6-0bde-4c7c-9dac-05e34f8dceb7-1.clean.webp"
+    ],
+    "drawing": "/media/products/5f2b48a6-0bde-4c7c-9dac-05e34f8dceb7-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x30x20 + datasheet-4vph-blue.vercel.app (id 5f2b48a6-0bde-4c7c-9dac-05e34f8dceb7)"
+  },
+  {
+    "code": "NR-NB-03",
+    "slug": "nb-10x40x20",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×40×20",
+    "nameEn": "Nail Box 10×40×20 cm",
+    "dimensions": {
+      "h": 410,
+      "w": 210,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/083266a5-c330-4f8a-8657-975bade9999d-1.clean.webp"
+    ],
+    "drawing": "/media/products/083266a5-c330-4f8a-8657-975bade9999d-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x40x20 + datasheet-4vph-blue.vercel.app (id 083266a5-c330-4f8a-8657-975bade9999d)"
+  },
+  {
+    "code": "NR-NB-04",
+    "slug": "nb-10x30x30",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×30×30",
+    "nameEn": "Nail Box 10×30×30 cm",
+    "dimensions": {
+      "h": 315,
+      "w": 315,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/12356f30-29c0-4fde-969a-806937ee83d4-1.clean.webp"
+    ],
+    "drawing": "/media/products/12356f30-29c0-4fde-969a-806937ee83d4-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x30x30 + datasheet-4vph-blue.vercel.app (id 12356f30-29c0-4fde-969a-806937ee83d4)"
+  },
+  {
+    "code": "NR-NB-05",
+    "slug": "nb-10x50x20",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×50×20",
+    "nameEn": "Nail Box 10×50×20 cm",
+    "dimensions": {
+      "h": 510,
+      "w": 210,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/c30ff8ca-6ac4-49a7-94b9-1c235e479fec-1.clean.webp"
+    ],
+    "drawing": "/media/products/c30ff8ca-6ac4-49a7-94b9-1c235e479fec-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x50x20 + datasheet-4vph-blue.vercel.app (id c30ff8ca-6ac4-49a7-94b9-1c235e479fec)"
+  },
+  {
+    "code": "NR-NB-06",
+    "slug": "nb-10x60x20",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×60×20",
+    "nameEn": "Nail Box 10×60×20 cm",
+    "dimensions": {
+      "h": 610,
+      "w": 210,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/ad925903-6d21-4e98-aea8-c78a48c39a25-1.clean.webp"
+    ],
+    "drawing": "/media/products/ad925903-6d21-4e98-aea8-c78a48c39a25-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x60x20 + datasheet-4vph-blue.vercel.app (id ad925903-6d21-4e98-aea8-c78a48c39a25)"
+  },
+  {
+    "code": "NR-NB-07",
+    "slug": "nb-10x40x30",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×40×30",
+    "nameEn": "Nail Box 10×40×30 cm",
+    "dimensions": {
+      "h": 410,
+      "w": 315,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/17a99a8c-58b9-4262-a8e7-8f44d0d34415-1.clean.webp"
+    ],
+    "drawing": "/media/products/17a99a8c-58b9-4262-a8e7-8f44d0d34415-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x40x30 + datasheet-4vph-blue.vercel.app (id 17a99a8c-58b9-4262-a8e7-8f44d0d34415)"
+  },
+  {
+    "code": "NR-NB-08",
+    "slug": "nb-10x70x20",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×70×20",
+    "nameEn": "Nail Box 10×70×20 cm",
+    "dimensions": {
+      "h": 710,
+      "w": 210,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/1fcd77f5-fa81-4b13-847e-7f22dc5da98c-1.clean.webp"
+    ],
+    "drawing": "/media/products/1fcd77f5-fa81-4b13-847e-7f22dc5da98c-drawing.webp",
+    "featured": true,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x70x20 + datasheet-4vph-blue.vercel.app (id 1fcd77f5-fa81-4b13-847e-7f22dc5da98c)"
+  },
+  {
+    "code": "NR-NB-09",
+    "slug": "nb-10x50x30",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×50×30",
+    "nameEn": "Nail Box 10×50×30 cm",
+    "dimensions": {
+      "h": 510,
+      "w": 310,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/1f9345bd-1852-44bd-ade0-879e929c6f95-1.clean.webp"
+    ],
+    "drawing": "/media/products/1f9345bd-1852-44bd-ade0-879e929c6f95-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x50x30 + datasheet-4vph-blue.vercel.app (id 1f9345bd-1852-44bd-ade0-879e929c6f95)"
+  },
+  {
+    "code": "NR-NB-10",
+    "slug": "nb-10x60x30",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×60×30",
+    "nameEn": "Nail Box 10×60×30 cm",
+    "dimensions": {
+      "h": 610,
+      "w": 310,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/3ef5015f-98f8-4fc6-8f89-ff64cdb9c9a1-1.clean.webp"
+    ],
+    "drawing": "/media/products/3ef5015f-98f8-4fc6-8f89-ff64cdb9c9a1-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x60x30 + datasheet-4vph-blue.vercel.app (id 3ef5015f-98f8-4fc6-8f89-ff64cdb9c9a1)"
+  },
+  {
+    "code": "NR-NB-11",
+    "slug": "nb-10x70x30",
+    "category": "nail-boxes",
+    "nameAr": "بواط مسمار 10×70×30",
+    "nameEn": "Nail Box 10×70×30 cm",
+    "dimensions": {
+      "h": 710,
+      "w": 315,
+      "d": 90
+    },
+    "material": "metal",
+    "images": [
+      "/media/products/cea1fdcb-5857-4ee1-900d-42b19a6eb208-1.clean.webp"
+    ],
+    "drawing": "/media/products/cea1fdcb-5857-4ee1-900d-42b19a6eb208-drawing.webp",
+    "featured": false,
+    "specStatus": "needs-review",
+    "source": "catalog-nour.lovable.app/products/nb-10x70x30 + datasheet-4vph-blue.vercel.app (id cea1fdcb-5857-4ee1-900d-42b19a6eb208)"
+  }
+]

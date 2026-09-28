@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شركة نور للإضاءة الحديثة | لوحات الكهرباء وحلول توزيع الطاقة</title>
+  <meta name="description" content="شركة نور للإضاءة الحديثة — رائدة في تصنيع لوحات الكهرباء وحلول توزيع الطاقة في مصر منذ 1985." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://bulukgskywmxunsbaxzq.supabase.co" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0B1F4B',
+            'navy-mid': '#1A3A7A',
+            red: '#CC2929',
+            'gray-bg': '#F5F7FA',
+            'gray-card': '#E2E8F0',
+            'text-dark': '#111827',
+            'text-muted': '#6B7280',
+            whatsapp: '#25D366',
+            'blue-accent': '#6eaaff',
+            'blue-bright': '#2f6bd6',
+          },
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --navy: #0B1F4B;
+      --navy-mid: #1A3A7A;
+      --red: #CC2929;
+    }
+    * { margin: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Cairo', sans-serif; color: #111827; }
+    /* sections sit flush — no default vertical gaps bleed between them */
+    section, footer, header { display: block; }
+    .num { font-family: 'Inter', sans-serif; }
+
+    .grad-navy { background-image: linear-gradient(180deg, #0e2657 0%, #0a1a40 100%); }
+    .grad-blue { background-image: linear-gradient(160deg, #2f6bd6 0%, #163a86 100%); }
+    .glow-blue { box-shadow: 0 10px 26px -8px rgba(47, 107, 214, 0.55); }
+    .shadow-card { box-shadow: 0 10px 30px -12px rgba(11, 31, 75, 0.18); }
+    .shadow-card-hover { box-shadow: 0 20px 44px -14px rgba(11, 31, 75, 0.28); }
+    .section-divider {
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent 4%, rgba(47, 107, 214, 0.34) 22%, #2f6bd6 50%, rgba(47, 107, 214, 0.34) 78%, transparent 96%);
+    }
+
+    /* subtle starry / circuit-dot texture on navy surfaces */
+    .starry {
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.10) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+    /* hero readability fade — keeps centered navy text crisp over the photo */
+    .hero-fade {
+      background-image: radial-gradient(ellipse at center,
+        rgba(255, 255, 255, 0.94) 0%,
+        rgba(255, 255, 255, 0.74) 38%,
+        rgba(255, 255, 255, 0.18) 68%,
+        rgba(255, 255, 255, 0) 82%);
+    }
+
+    /* centered section title with red // decorators */
+    .sec-title { display: flex; align-items: center; justify-content: center; gap: 14px; }
+    .sec-title .slash { color: var(--red); font-weight: 800; font-family: 'Inter', sans-serif; letter-spacing: -2px; font-size: 22px; }
+    .sec-title .line { width: 44px; height: 2px; background: linear-gradient(90deg, transparent, var(--navy-mid)); border-radius: 2px; }
+
+    /* glowing product box for specialization cards */
+    .spec-glow { box-shadow: 0 0 18px rgba(26, 58, 122, 0.9), 0 0 36px rgba(100, 168, 255, 0.25); }
+
+    /* specialization slider track — JS controls scroll, scrollbar hidden */
+    .slider-track {
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      padding: 6px 4px 12px;
+    }
+    .slider-track::-webkit-scrollbar { display: none; }
+    .spec-card { scroll-snap-align: start; flex: 0 0 calc((100% - 4 * 22px) / 5); }
+
+    /* card transitions */
+    .card-anim { transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease; }
+    .proj-card:hover { transform: translateY(-6px); }
+    .why-card:hover { transform: translateY(-3px); }
+    .spec-card:hover .spec-box { transform: translateY(-4px) scale(1.025); }
+    .spec-box { transition: transform 0.25s ease; }
+
+    /* fade-in on image load */
+    img.fade-img { opacity: 0; transition: opacity 0.6s ease; }
+    img.fade-img.loaded { opacity: 1; }
+
+    @media (max-width: 1100px) { .spec-card { flex-basis: calc((100% - 2 * 22px) / 3); } }
+    @media (max-width: 768px)  { .spec-card { flex-basis: calc((100% - 22px) / 2); } }
+    @media (max-width: 480px)  { .spec-card { flex-basis: 82%; } }
+
+    @media (max-width: 767px) {
+      html, body { max-width: 100%; overflow-x: clip; }
+
+      /* MOBILE HERO: desktop-style overlay — the text sits OVER the hero
+         image (not in a separate band). A shorter, balanced height keeps both
+         the factory (left) and building (right) sides visible, with a soft
+         radial fade behind the centered text for readability. */
+      .hero-shell { height: 310px !important; background: #0e2657; }
+      .hero-shell > img {
+        position: absolute !important;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover !important;
+        object-position: center !important;
+      }
+      .hero-fade {
+        display: block;
+        background-image: radial-gradient(ellipse 74% 82% at 50% 50%,
+          rgba(255, 255, 255, 0.90) 0%,
+          rgba(255, 255, 255, 0.62) 32%,
+          rgba(255, 255, 255, 0.20) 56%,
+          rgba(255, 255, 255, 0) 74%);
+      }
+      .hero-content { position: relative !important; padding-top: 0; transform: none; }
+      .hero-content .max-w-2xl { text-shadow: 0 1px 12px rgba(255, 255, 255, 0.7); }
+      .hero-content .mt-4 { margin-top: 0.5rem; }
+      .hero-shell h1 { font-size: 1.7rem; line-height: 1.16; }
+      .hero-shell p { font-size: 0.82rem; line-height: 1.5; max-width: 21rem; margin-left: auto; margin-right: auto; }
+
+      #spec { padding-top: 1.75rem; padding-bottom: 2rem; }
+      #projects { padding-top: 2rem; padding-bottom: 2rem; }
+      #about { padding-top: 2rem; padding-bottom: 2.25rem; }
+      #resources, #equipment, #sectors, #leadership, #contact-us, #why {
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
+      }
+
+      .sec-title { gap: 8px; margin-bottom: 1.75rem; }
+      .sec-title .line { width: 24px; flex: 0 0 24px; }
+      .sec-title .slash { font-size: 18px; }
+      .sec-title h2 {
+        min-width: 0;
+        font-size: 1.65rem;
+        line-height: 1.35;
+        text-align: center;
+      }
+      #projects .sec-title .line { width: 14px; flex-basis: 14px; }
+      #projects .sec-title h2 { font-size: 1.55rem; }
+
+      .slider-track { gap: 14px; padding: 4px 2px 10px; scroll-padding-inline: 2px; }
+      .spec-card > div > div:first-child { padding: 1rem; }
+
+      /* MOBILE PROJECTS: 2 cards per row (like the Sectors section).
+         Smaller image + stacked, centered body so half-width cards stay clean. */
+      #projGrid { gap: 12px; }
+      #projGrid .proj-card > div:first-child { height: 118px; }            /* image */
+      #projGrid .proj-card > div:last-child {                             /* body */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+        min-height: 0;
+        padding: 0.7rem 0.6rem 0.8rem;
+      }
+      #projGrid .proj-card > div:last-child > div:first-child {           /* text block */
+        flex: none;
+        width: 100%;
+        text-align: center;
+      }
+      #projGrid .proj-card h3 { font-size: 0.8rem; line-height: 1.3; }
+      #projGrid .proj-card p  { font-size: 0.66rem; line-height: 1.45; margin-top: 0.2rem; }
+      #projGrid .proj-card > div:last-child > span {                      /* logo box */
+        width: 60px;
+        height: 38px;
+      }
+
+      #about > div > div:first-child { margin-bottom: 1.75rem; }
+      #about > div > div:first-child h2 { font-size: 1.75rem; }
+      #about > div > div:nth-child(2) { gap: 1.75rem; }
+      #about h3 { font-size: 1.75rem; line-height: 1.3; }
+
+      #resources > div > div:first-child,
+      #sectors > div > div:first-child { margin-bottom: 1.75rem; }
+      #resources h2, #sectors h2 { font-size: 1.75rem; line-height: 1.35; }
+      #resources a { padding: 1rem; gap: 0.85rem; }
+      #resources a > div:first-child { width: 3.25rem; height: 3.25rem; }
+
+      #equipment article > div:last-child { padding: 1rem; }
+      #sectors > div > div:nth-child(2) { gap: 12px; }
+      #sectors article, #sectors .group { min-width: 0; }
+      #sectors .group > div:last-child { padding: 0.75rem; }
+
+      #leadership article { padding: 1.25rem; }
+      #leadership .relative.mt-6 > .relative { padding: 1.5rem; }
+
+      #contact-us > div > .grid > div:first-child { padding: 1.25rem; }
+      #contact-us .relative.p-7 { padding: 1.5rem; }
+      #contact-us a { min-height: 44px; }
+
+      #why > div > div:first-child { margin-bottom: 1.75rem; }
+      #whyGrid { gap: 14px; }
+      #whyGrid .why-card { padding: 1.15rem; }
+
+      .card-anim:hover, .proj-card:hover, .why-card:hover {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-experience-badge { left: 0 !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-text-dark">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="grad-navy text-white sticky top-0 z-50 relative shadow-lg">
+    <div class="absolute inset-0 starry opacity-60 pointer-events-none"></div>
+    <div class="container mx-auto px-4 lg:px-8 relative">
+      <div class="flex items-center justify-between gap-4 h-[70px]">
+
+        <!-- RIGHT: logo -->
+        <a href="#top" class="shrink-0 flex items-center" aria-label="نور للإضاءة الحديثة">
+          <span class="inline-flex items-center bg-white rounded-xl px-3 py-1.5 shadow-sm ring-1 ring-black/5">
+            <img src="public/nour-main-logo(1).png" alt="نور للإضاءة الحديثة" width="285" height="160" decoding="async" class="h-10 md:h-12 w-auto object-contain block"
+                 onerror="this.onerror=null;this.src='./nour-logo.png';this.parentElement.classList.remove('bg-white','shadow-sm','ring-1','ring-black/5','px-3','py-1.5')" />
+          </span>
+        </a>
+
+        <!-- CENTER: nav links -->
+        <nav class="hidden lg:flex items-center gap-7 text-[14px] font-medium">
+          <a href="#about" class="hover:text-blue-accent transition">من نحن</a>
+          <a href="#spec" class="hover:text-blue-accent transition">تخصصنا</a>
+          <a href="#why" class="hover:text-blue-accent transition">لماذا نور</a>
+          <a href="#projects" class="hover:text-blue-accent transition">مشروعاتنا</a>
+          <a href="#contact" class="hover:text-blue-accent transition">تواصل</a>
+        </nav>
+
+        <!-- LEFT: phone + whatsapp + facebook -->
+        <div class="flex items-center gap-2 md:gap-2.5 shrink-0">
+          <a href="tel:01003510077" class="hidden md:flex items-center gap-2 border border-white/25 hover:border-white/50 transition rounded-full pr-4 pl-1.5 py-1.5">
+            <span class="num font-semibold tracking-wider text-sm" dir="ltr">01003510077</span>
+            <span class="grid place-items-center w-7 h-7 rounded-full bg-white/15 text-white">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+          </a>
+          <a href="https://wa.me/201003510077" target="_blank" rel="noopener noreferrer" aria-label="واتساب" class="flex items-center gap-2 bg-whatsapp hover:brightness-110 transition rounded-full px-4 py-2.5 text-sm font-bold shadow-lg ring-1 ring-white/40">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-[18px] h-[18px]"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/></svg>
+            <span class="hidden sm:inline">واتساب</span>
+          </a>
+          <a href="https://www.facebook.com/share/1YaXaVgUsX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك" class="flex items-center gap-2 bg-[#1877F2] hover:brightness-110 transition rounded-full px-4 py-2.5 text-sm font-bold shadow-lg ring-1 ring-white/40">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-[18px] h-[18px]"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+            <span class="hidden sm:inline">فيسبوك</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="h-[2px] w-full bg-gradient-to-l from-transparent via-red to-transparent opacity-70"></div>
+  </header>
+
+  <span id="top"></span>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="relative">
+    <div class="hero-shell relative h-[460px] md:h-[510px] overflow-hidden">
+      <img src="./hero-nour-factory.jpg" alt="مصنع نور للإضاءة الحديثة" width="1672" height="941" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 hero-fade"></div>
+
+      <div class="hero-content relative container mx-auto px-4 lg:px-8 h-full flex items-center justify-center">
+        <div class="max-w-2xl text-center">
+          <span dir="ltr" class="inline-flex items-center rounded-full border border-blue-bright/20 bg-white/55 px-4 py-1.5 font-inter text-[11px] md:text-xs font-bold uppercase tracking-[0.18em] text-blue-bright shadow-sm backdrop-blur-sm">
+            Company Profile
+          </span>
+          <h1 class="mt-4 text-4xl md:text-6xl font-black text-navy leading-[1.15]">
+            شركة نور<br />للإضاءة الحديثة
+          </h1>
+          <div class="mt-4">
+            <span class="inline-block text-blue-bright font-extrabold text-xl md:text-2xl drop-shadow-sm">شركة متخصصة في عالم الكهرباء</span>
+          </div>
+          <p class="mt-4 text-navy/80 font-semibold text-base md:text-lg leading-relaxed">
+            شركة نور للإضاءة الحديثة واحدة من الشركات الرائدة في تصنيع لوحات الكهرباء وحلول توزيع الطاقة في مصر منذ انطلاقتها عام 1985.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== من نحن (About) ===================== -->
+  <div class="section-divider" aria-hidden="true"></div>
+  <section id="about" class="mt-0 pt-9 pb-10 md:pb-12 bg-gradient-to-b from-gray-bg to-white">
+    <div class="container mx-auto px-4 lg:px-8" style="max-width: 1180px;">
+      <div class="mb-8 text-right">
+        <span class="slash" style="color:var(--red);font-weight:800;font-family:'Inter',sans-serif;font-size:22px;">//</span>
+        <h2 class="inline-block text-3xl md:text-4xl font-extrabold text-navy mr-2">من نحن</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-10 lg:gap-14 items-center">
+        <!-- image -->
+        <div class="relative order-2 lg:order-1">
+          <div class="absolute -inset-4 grad-blue rounded-3xl opacity-20 blur-2xl"></div>
+          <div class="relative rounded-3xl overflow-hidden shadow-card border border-gray-card/60 aspect-[16/9]">
+            <img src="./hero-nour-factory.jpg" alt="مصنع ومرافق شركة نور للإضاءة الحديثة" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+          </div>
+          <div class="about-experience-badge absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-card-hover px-6 py-4 border border-gray-card/60 hidden md:flex items-center gap-3">
+            <div class="grid place-items-center w-12 h-12 rounded-xl grad-blue text-white glow-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div class="text-right">
+              <div class="num text-2xl font-extrabold text-navy leading-none">+40 <span class="text-red text-base">عام</span></div>
+              <div class="text-xs text-text-muted mt-1">عاماً من الخبرة</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- text -->
+        <div class="order-1 lg:order-2 text-right">
+          <span class="inline-flex items-center gap-2 text-blue-bright font-bold text-sm bg-blue-bright/10 px-3 py-1.5 rounded-full">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
+            قصة تمتد لأكثر من 40 عامًا
+          </span>
+          <h3 class="mt-4 text-3xl md:text-4xl font-black text-navy leading-tight tracking-tight">40 عامًا من الخبرة... وثقة تُبنى بالمشروعات الناجحة</h3>
+          <div class="mt-5 space-y-4 text-[#33405a] font-medium leading-loose text-[15px] md:text-base">
+            <p>منذ انطلاقها عام 1985، أصبحت نور للإضاءة الحديثة واحدة من الشركات الرائدة في تصنيع اللوحات الكهربائية وحلول توزيع الطاقة في مصر. وبفضل خبرة ممتدة لأكثر من أربعة عقود، نجحنا في تقديم منتجات وحلول هندسية تخدم المشروعات السكنية والتجارية والصناعية بكفاءة وجودة عالية.</p>
+            <p>نؤمن بأن لكل مشروع متطلباته الخاصة، لذلك نوفّر حلولاً مصممة خصيصًا وفق احتياجات العملاء، مع الالتزام الكامل بمعايير الجودة والسلامة العالمية — بدءًا من التصميم الهندسي وحتى التصنيع والتسليم.</p>
+            <p>نعتمد على خبرات هندسية متخصصة وخطوط إنتاج متطورة تُمكّننا من تصميم وتصنيع اللوحات الكهربائية بمختلف أنواعها ومقاساتها وفقًا لمتطلبات كل مشروع، مع تقديم حلول تحقق أفضل أداء وأعلى مستويات الاعتمادية.</p>
+            <p>واليوم، نفخر بخدمة مئات العملاء والمشروعات، ونواصل رحلتنا نحو الابتكار والتطوير لنكون الخيار الأول في مجال تصنيع اللوحات الكهربائية وحلول الكهرباء والطاقة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BLUE SEPARATOR LINE (flush, no gap) ===================== -->
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ===================== تخصصنا (Specializations) — flush below the line ===================== -->
+  <section id="spec" class="pt-7 pb-9 bg-white">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="sec-title mb-8">
+        <span class="line"></span>
+        <span class="slash">//</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-navy">تخصصنا</h2>
+        <span class="slash">//</span>
+        <span class="line"></span>
+      </div>
+
+      <div class="relative">
+        <button id="specPrev" aria-label="السابق" class="hidden md:grid place-items-center absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-card text-navy hover:text-blue-bright">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+        <button id="specNext" aria-label="التالي" class="hidden md:grid place-items-center absolute -left-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-card text-navy hover:text-blue-bright">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+
+        <div id="specTrack" class="slider-track">
+          <!-- cards injected here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== الموارد (Resources) — catalog + data sheet ===================== -->
+  <div class="section-divider" aria-hidden="true"></div>
+  <section id="resources" class="py-11 md:py-14 bg-gray-bg">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="flex flex-col items-center text-center mb-8">
+        <span class="inline-flex items-center gap-2 text-blue-bright font-bold text-sm bg-blue-bright/10 px-4 py-1.5 rounded-full mb-3">الموارد</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-navy">استكشف منتجاتنا وبياناتنا الفنية</h2>
+        <p class="mt-3 text-text-muted max-w-2xl leading-relaxed text-[15px] md:text-base">
+          تصفّح الكتالوج الكامل لمنتجاتنا، أو اطّلع على الداتا شيت بالمواصفات والمقاسات التفصيلية.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 max-w-4xl mx-auto">
+        <!-- Catalog card -->
+        <a href="https://catalog-nour.lovable.app/" target="_blank" rel="noopener noreferrer"
+           class="group bg-white rounded-2xl shadow-card hover:shadow-card-hover border border-gray-card/60 p-6 md:p-7 flex items-center gap-5 transition hover:-translate-y-1">
+          <div class="grid place-items-center w-16 h-16 rounded-2xl grad-blue text-white glow-blue shrink-0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="text-right min-w-0 flex-1">
+            <h3 class="text-lg md:text-xl font-extrabold text-navy">عرض الكتالوج</h3>
+            <p class="text-sm text-text-muted mt-1 leading-relaxed">الكتالوج الكامل لمنتجات نور بالصور والتفاصيل.</p>
+            <span class="inline-flex items-center gap-1 text-blue-bright font-bold text-sm mt-3 group-hover:gap-2 transition-all">
+              افتح الكتالوج
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Data sheet card -->
+        <a href="https://datasheet-4vph-blue.vercel.app/" target="_blank" rel="noopener noreferrer"
+           class="group bg-white rounded-2xl shadow-card hover:shadow-card-hover border border-gray-card/60 p-6 md:p-7 flex items-center gap-5 transition hover:-translate-y-1">
+          <div class="grid place-items-center w-16 h-16 rounded-2xl grad-blue text-white glow-blue shrink-0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          </div>
+          <div class="text-right min-w-0 flex-1">
+            <h3 class="text-lg md:text-xl font-extrabold text-navy">الداتا شيت</h3>
+            <p class="text-sm text-text-muted mt-1 leading-relaxed">المواصفات والمقاسات الفنية التفصيلية لكل منتج.</p>
+            <span class="inline-flex items-center gap-1 text-blue-bright font-bold text-sm mt-3 group-hover:gap-2 transition-all">
+              افتح الداتا شيت
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15 18-6-6 6-6"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== القطاعات التي نخدمها (Sectors) ===================== -->
+  <div class="section-divider" aria-hidden="true"></div>
+  <section id="sectors" class="py-11 md:py-14 bg-white">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="flex flex-col items-center text-center mb-8">
+        <span class="inline-flex items-center gap-2 text-blue-bright font-bold text-sm bg-blue-bright/10 px-4 py-1.5 rounded-full mb-3">حلول لكل قطاع</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-navy">القطاعات التي نخدمها</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+        <!-- المصانع -->
+        <div class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:-translate-y-1 hover:shadow-card-hover transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg relative">
+            <img src="./public/sectors/factories.webp" alt="المصانع" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/45 to-transparent"></div>
+            <span class="absolute bottom-2 right-2 grid place-items-center w-9 h-9 rounded-xl grad-blue text-white glow-blue ring-2 ring-white/30"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M2 20a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V8l-7 5V8l-7 5V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1z"/><path d="M6 17h.01M10 17h.01M14 17h.01M18 17h.01"/></svg></span>
+          </div>
+          <div class="p-4 text-center"><h3 class="font-bold text-navy text-sm md:text-base">المصانع</h3></div>
+        </div>
+        <!-- المستشفيات -->
+        <div class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:-translate-y-1 hover:shadow-card-hover transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg relative">
+            <img src="./public/sectors/hospitals.webp" alt="المستشفيات" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/45 to-transparent"></div>
+            <span class="absolute bottom-2 right-2 grid place-items-center w-9 h-9 rounded-xl grad-blue text-white glow-blue ring-2 ring-white/30"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg></span>
+          </div>
+          <div class="p-4 text-center"><h3 class="font-bold text-navy text-sm md:text-base">المستشفيات</h3></div>
+        </div>
+        <!-- المدارس والجامعات -->
+        <div class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:-translate-y-1 hover:shadow-card-hover transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg relative">
+            <img src="./public/sectors/education.webp" alt="المدارس والجامعات" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/45 to-transparent"></div>
+            <span class="absolute bottom-2 right-2 grid place-items-center w-9 h-9 rounded-xl grad-blue text-white glow-blue ring-2 ring-white/30"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.5 2 6 2s6-1 6-2v-5"/></svg></span>
+          </div>
+          <div class="p-4 text-center"><h3 class="font-bold text-navy text-sm md:text-base">المدارس والجامعات</h3></div>
+        </div>
+        <!-- المولات التجارية -->
+        <div class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:-translate-y-1 hover:shadow-card-hover transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg relative">
+            <img src="./public/sectors/malls.webp" alt="المولات التجارية" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/45 to-transparent"></div>
+            <span class="absolute bottom-2 right-2 grid place-items-center w-9 h-9 rounded-xl grad-blue text-white glow-blue ring-2 ring-white/30"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+          </div>
+          <div class="p-4 text-center"><h3 class="font-bold text-navy text-sm md:text-base">المولات التجارية</h3></div>
+        </div>
+        <!-- الأبراج السكنية -->
+        <div class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:-translate-y-1 hover:shadow-card-hover transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg relative">
+            <img src="./public/sectors/residential-towers.webp" alt="الأبراج السكنية" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/45 to-transparent"></div>
+            <span class="absolute bottom-2 right-2 grid place-items-center w-9 h-9 rounded-xl grad-blue text-white glow-blue ring-2 ring-white/30"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect x="6" y="2" width="12" height="20" rx="1"/><path d="M9 6h.01M15 6h.01M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 22v-3h4v3"/></svg></span>
+          </div>
+          <div class="p-4 text-center"><h3 class="font-bold text-navy text-sm md:text-base">الأبراج السكنية</h3></div>
+        </div>
+        <!-- المباني الإدارية -->
+        <div class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:-translate-y-1 hover:shadow-card-hover transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg relative">
+            <img src="./public/sectors/office-buildings.webp" alt="المباني الإدارية" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/45 to-transparent"></div>
+            <span class="absolute bottom-2 right-2 grid place-items-center w-9 h-9 rounded-xl grad-blue text-white glow-blue ring-2 ring-white/30"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"/><path d="M2 22h20"/><path d="M10 6h.01M14 6h.01M10 10h.01M14 10h.01M10 14h.01M14 14h.01"/></svg></span>
+          </div>
+          <div class="p-4 text-center"><h3 class="font-bold text-navy text-sm md:text-base">المباني الإدارية</h3></div>
+        </div>
+        <!-- محطات المياه والطاقة -->
+        <div class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:-translate-y-1 hover:shadow-card-hover transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg relative">
+            <img src="./public/sectors/water-energy.webp" alt="محطات المياه والطاقة" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/45 to-transparent"></div>
+            <span class="absolute bottom-2 right-2 grid place-items-center w-9 h-9 rounded-xl grad-blue text-white glow-blue ring-2 ring-white/30"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>
+          </div>
+          <div class="p-4 text-center"><h3 class="font-bold text-navy text-sm md:text-base">محطات المياه والطاقة</h3></div>
+        </div>
+        <!-- المشروعات الصناعية -->
+        <div class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:-translate-y-1 hover:shadow-card-hover transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg relative">
+            <img src="./public/sectors/industrial-projects.webp" alt="المشروعات الصناعية" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/45 to-transparent"></div>
+            <span class="absolute bottom-2 right-2 grid place-items-center w-9 h-9 rounded-xl grad-blue text-white glow-blue ring-2 ring-white/30"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          </div>
+          <div class="p-4 text-center"><h3 class="font-bold text-navy text-sm md:text-base">المشروعات الصناعية</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- thin divider connecting تخصصنا and مشروعات -->
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ===================== مشروعات (Projects) ===================== -->
+  <section id="projects" class="pt-9 pb-9 bg-gray-bg">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="sec-title mb-8">
+        <span class="line"></span>
+        <span class="slash">//</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-navy">مشروعات رائدة نفخر بتنفيذها</h2>
+        <span class="slash">//</span>
+        <span class="line"></span>
+      </div>
+
+      <div id="projGrid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[22px]">
+        <!-- cards injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== المعدات المستخدمة (Equipment Used) ===================== -->
+  <div class="section-divider" aria-hidden="true"></div>
+  <section id="equipment" class="py-11 md:py-14 bg-white">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="sec-title mb-8">
+        <span class="line"></span>
+        <span class="slash">//</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-navy">المعدات المستخدمة</h2>
+        <span class="slash">//</span>
+        <span class="line"></span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-6">
+        <!-- 1 -->
+        <article class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg">
+            <img src="https://nourprofile-vvjo.vercel.app/assets/equip-fiber-laser-DSVoOQv0.png" alt="القطع بالليزر الفايبر" loading="lazy" decoding="async"
+                 onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/CNC%20Laser%20Cutting%20Machine.jpg?width=500';"
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-5 text-right">
+            <h3 class="font-bold text-navy text-[15px] md:text-base">Fiber Laser Cutting</h3>
+            <p class="text-xs text-text-muted mt-1.5 leading-relaxed">تُستخدم ماكينات القطع بالليزر الفايبر في تنفيذ عمليات القطع بدقة عالية وسرعة كبيرة.</p>
+          </div>
+        </article>
+        <!-- 2 -->
+        <article class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg">
+            <img src="https://nourprofile-vvjo.vercel.app/assets/equip-cnc-press-brake-CgAazn_7.png" alt="ماكينة الثني CNC" loading="lazy" decoding="async"
+                 onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/CNC%20Laser%20Cutting%20Machine.jpg?width=500';"
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-5 text-right">
+            <h3 class="font-bold text-navy text-[15px] md:text-base">CNC Press Brake</h3>
+            <p class="text-xs text-text-muted mt-1.5 leading-relaxed">تُستخدم ماكينة الثني CNC في عمليات الثني والتشكيل بدقة هندسية عالية.</p>
+          </div>
+        </article>
+        <!-- 3 -->
+        <article class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg">
+            <img src="https://nourprofile-vvjo.vercel.app/assets/equip-hydraulic-press-BzqWXiRx.png" alt="ماكينات الكبس الهيدروليكي" loading="lazy" decoding="async"
+                 onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Press%20Brakes.jpg?width=500';"
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-5 text-right">
+            <h3 class="font-bold text-navy text-[15px] md:text-base">Hydraulic / Eccentric Press</h3>
+            <p class="text-xs text-text-muted mt-1.5 leading-relaxed">تُستخدم ماكينات الكبس الهيدروليكي في عمليات الكبس والتشكيل المختلفة.</p>
+          </div>
+        </article>
+        <!-- 4 -->
+        <article class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg">
+            <img src="https://nourprofile-vvjo.vercel.app/assets/equip-electrostatic-painting-CSuGEiuS.png" alt="الدهان الكهروستاتيكي" loading="lazy" decoding="async"
+                 onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/CNC%20Laser%20Cutting%20Machine.jpg?width=500';"
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-5 text-right">
+            <h3 class="font-bold text-navy text-[15px] md:text-base">Electrostatic Painting</h3>
+            <p class="text-xs text-text-muted mt-1.5 leading-relaxed">يتم تطبيق الدهان بتقنية الدهان الكهروستاتيكي للحصول على تشطيب نهائي عالي الجودة.</p>
+          </div>
+        </article>
+        <!-- 5 -->
+        <article class="group bg-white rounded-2xl shadow-card border border-gray-card/60 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition duration-300">
+          <div class="aspect-[4/3] overflow-hidden bg-gray-bg">
+            <img src="./public/images/equipment/laser-welding.jpg" alt="اللحام بالليزر" loading="lazy" decoding="async"
+                 onerror="this.onerror=null;this.src='/images/equipment/laser-welding.jpg';"
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-5 text-right">
+            <h3 class="font-bold text-navy text-[15px] md:text-base">Laser Welding</h3>
+            <p class="text-xs text-text-muted mt-1.5 leading-relaxed">نستخدم تقنية اللحام بالليزر لتنفيذ لحامات دقيقة ونظيفة تعزز جودة التجميع ومتانة مكونات اللوحات الكهربائية.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== رؤية القيادة (Leadership) — near bottom, above contact ===================== -->
+  <div class="section-divider" aria-hidden="true"></div>
+  <section id="leadership" class="py-11 md:py-14 bg-gray-bg">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="sec-title mb-8">
+        <span class="line"></span>
+        <span class="slash">//</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-navy">رؤية القيادة</h2>
+        <span class="slash">//</span>
+        <span class="line"></span>
+      </div>
+
+      <!-- founder + CEO -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Founder -->
+        <article class="bg-white rounded-2xl shadow-card border border-gray-card/60 p-7 text-center flex flex-col items-center hover:shadow-card-hover transition">
+          <div class="relative aspect-square w-44 sm:w-48 rounded-lg overflow-hidden ring-1 ring-gray-card shadow-card bg-gray-bg">
+            <img src="./public/leadership/galal.jpg" alt="المهندس جلال عامر" loading="lazy" decoding="async"
+                 class="w-full h-full object-cover object-center" />
+          </div>
+          <span class="mt-4 text-xs font-bold text-blue-bright bg-blue-bright/10 px-3 py-1 rounded-full">المؤسس</span>
+          <h3 class="mt-2 text-lg font-extrabold text-navy">المهندس جلال عامر</h3>
+          <p class="text-sm text-text-muted">مؤسس الشركة</p>
+          <p class="mt-3 text-sm text-text-muted leading-relaxed">أسّس المهندس جلال عامر شركة نور عام 1985 برؤية واضحة في مجال الكهرباء، ثم قادها نحو التخصص في صناعة لوحات الكهرباء، واضعًا أساسًا من الجودة والثقة ما زال يميز الشركة حتى اليوم.</p>
+        </article>
+
+        <!-- CEO -->
+        <article class="bg-white rounded-2xl shadow-card border border-gray-card/60 p-7 text-center flex flex-col items-center hover:shadow-card-hover transition">
+          <div class="relative aspect-square w-44 sm:w-48 rounded-lg overflow-hidden ring-1 ring-gray-card shadow-card bg-gray-bg">
+            <img src="./public/leadership/mostafa.jpg" alt="م. مصطفى جلال عامر" loading="lazy" decoding="async"
+                 class="w-full h-full object-cover object-center" />
+          </div>
+          <span class="mt-4 text-xs font-bold text-blue-bright bg-blue-bright/10 px-3 py-1 rounded-full">رئيس مجلس الإدارة — CEO</span>
+          <h3 class="mt-2 text-lg font-extrabold text-navy">م. مصطفى جلال عامر</h3>
+          <p class="text-sm text-text-muted">رئيس مجلس الإدارة</p>
+          <p class="mt-3 text-sm text-text-muted leading-relaxed">يقود م. مصطفى جلال عامر الشركة بخبرة ورؤية واضحة نحو تطوير صناعة لوحات الكهرباء، حرصًا على تقديم منتجات عالية الجودة تعتمد على الابتكار والدقة في التصنيع والثقة المتبادلة مع العملاء.</p>
+        </article>
+      </div>
+
+      <!-- Vision banner -->
+      <div class="relative mt-6 max-w-4xl mx-auto rounded-2xl grad-navy text-white overflow-hidden shadow-card">
+        <div class="absolute inset-0 starry opacity-70 pointer-events-none"></div>
+        <div class="relative p-7 md:p-9 text-center flex flex-col items-center">
+          <div class="grid place-items-center w-14 h-14 rounded-2xl bg-white/[0.08] border border-white/15 text-blue-accent mb-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-black mb-3">رؤيتنا</h3>
+          <p class="text-white/85 leading-loose max-w-2xl text-[15px] md:text-base">أن نظل الاختيار الأول في مصر وخارجها في تصنيع وتوريد لوحات الكهرباء، من خلال منتجات عالية الجودة تعتمد على الابتكار، والدقة في التصنيع، والثقة المتبادلة مع عملائنا.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== تواصل معنا (Contact) ===================== -->
+  <div class="section-divider" aria-hidden="true"></div>
+  <section id="contact-us" class="py-11 md:py-14 bg-white">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="sec-title mb-8">
+        <span class="line"></span>
+        <span class="slash">//</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-navy">تواصل معنا</h2>
+        <span class="slash">//</span>
+        <span class="line"></span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
+        <!-- contact info -->
+        <div class="bg-white rounded-2xl shadow-card border border-gray-card/60 p-6 md:p-8">
+          <h3 class="text-xl font-extrabold text-navy mb-5">معلومات التواصل</h3>
+          <ul class="space-y-4 text-right">
+            <li class="flex items-start gap-3">
+              <span class="grid place-items-center w-10 h-10 rounded-xl bg-blue-bright/10 text-blue-bright shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div class="min-w-0">
+                <div class="text-xs text-text-muted">العنوان</div>
+                <div class="text-sm font-semibold text-navy leading-relaxed">بلوك ٤، ١٩ شارع جلال عامر، إنشاص الرمل، مدينة أنشاص الصناعية</div>
+                <a href="https://maps.app.goo.gl/qaDKsGmNwUuuNrY57?g_st=ic" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-blue-bright text-xs font-bold mt-1 hover:underline">عرض على خرائط جوجل
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m15 18-6-6 6-6"/></svg>
+                </a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="grid place-items-center w-10 h-10 rounded-xl bg-blue-bright/10 text-blue-bright shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <div class="min-w-0">
+                <div class="text-xs text-text-muted">الهاتف</div>
+                <div class="text-sm font-semibold text-navy" dir="ltr"><a href="tel:01003510077" class="hover:text-blue-bright">01003510077</a> — <a href="tel:01006300039" class="hover:text-blue-bright">01006300039</a></div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="grid place-items-center w-10 h-10 rounded-xl bg-whatsapp/10 text-whatsapp shrink-0"><svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></span>
+              <div class="min-w-0">
+                <div class="text-xs text-text-muted">واتساب</div>
+                <a href="https://wa.me/201003510077" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy hover:text-whatsapp" dir="ltr">01003510077</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="grid place-items-center w-10 h-10 rounded-xl bg-blue-bright/10 text-blue-bright shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+              <div class="min-w-0">
+                <div class="text-xs text-text-muted">البريد الإلكتروني</div>
+                <a href="mailto:nourformodernligting111@gmail.com" class="text-sm font-semibold text-navy hover:text-blue-bright break-all" dir="ltr">nourformodernligting111@gmail.com</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="grid place-items-center w-10 h-10 rounded-xl bg-[#1877F2]/10 text-[#1877F2] shrink-0"><svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></span>
+              <div class="min-w-0">
+                <div class="text-xs text-text-muted">فيسبوك</div>
+                <a href="https://www.facebook.com/share/1YaXaVgUsX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-navy hover:text-[#1877F2]">صفحة نور على فيسبوك</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA box -->
+        <div class="relative rounded-2xl grad-navy text-white overflow-hidden shadow-card flex flex-col justify-center">
+          <div class="absolute inset-0 starry opacity-70 pointer-events-none"></div>
+          <div class="relative p-7 md:p-9 text-center">
+            <h3 class="text-2xl md:text-3xl font-black leading-tight">اطلب عرض سعر أو تصميمًا خاصًا</h3>
+            <p class="mt-3 text-white/80 leading-relaxed text-[15px] md:text-base max-w-md mx-auto">تواصل مع فريق نور للإضاءة الحديثة للحصول على عرض سعر أو حل مخصص يناسب مشروعك.</p>
+            <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <a href="https://wa.me/201003510077" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-whatsapp hover:brightness-110 transition rounded-full px-6 py-3 font-bold shadow-lg ring-1 ring-white/30">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                تواصل واتساب
+              </a>
+              <a href="https://catalog-nour.lovable.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-navy hover:bg-white/90 transition rounded-full px-6 py-3 font-bold shadow-lg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                عرض الكتالوج
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== لماذا نور (Why Nour) — directly after contact ===================== -->
+  <div class="section-divider" aria-hidden="true"></div>
+  <section id="why" class="py-11 md:py-14 bg-white">
+    <div class="container mx-auto px-4 lg:px-8">
+      <!-- right-aligned title with short red underline -->
+      <div class="mb-8 md:mb-9 text-right">
+        <h2 class="inline-block text-3xl md:text-4xl font-extrabold text-navy">لماذا نور</h2>
+        <span class="block w-20 h-1 rounded bg-red mt-3 mr-1"></span>
+      </div>
+
+      <div id="whyGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-5">
+        <!-- cards injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="contact" class="grad-navy text-white relative">
+    <div class="absolute inset-0 starry opacity-60 pointer-events-none"></div>
+    <div class="h-px w-full bg-white/10"></div>
+    <div class="container mx-auto px-4 lg:px-8 py-8 md:py-10 relative">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-6 md:gap-6 lg:gap-7">
+
+        <!-- col 1: brand -->
+        <div class="col-span-2 md:col-span-1 lg:col-span-1">
+          <a href="#top" class="inline-flex items-center" aria-label="نور للإضاءة الحديثة">
+            <span class="inline-flex items-center bg-white rounded-lg px-3 py-1.5 shadow-sm ring-1 ring-black/5">
+              <img src="public/nour-main-logo(1).png" alt="نور للإضاءة الحديثة" width="285" height="160" loading="lazy" decoding="async" class="h-9 md:h-11 w-auto object-contain block"
+                   onerror="this.onerror=null;this.src='./nour-logo.png';this.parentElement.classList.remove('bg-white','shadow-sm','ring-1','ring-black/5','px-4','py-2')" />
+            </span>
+          </a>
+          <p class="mt-2 text-sm text-white/70 leading-6">
+            شركة متخصصة في عالم الكهرباء، رائدة في تصنيع اللوحات الكهربائية وحلول توزيع الطاقة في مصر منذ عام 1985.
+          </p>
+        </div>
+
+        <!-- col 2: quick links -->
+        <div>
+          <h4 class="font-bold mb-2 text-base md:text-lg">روابط سريعة</h4>
+          <ul class="grid grid-cols-2 gap-y-1.5 gap-x-4 text-sm text-white/80">
+            <li><a href="#about" class="hover:text-blue-accent transition">من نحن</a></li>
+            <li><a href="#spec" class="hover:text-blue-accent transition">تخصصنا</a></li>
+            <li><a href="#projects" class="hover:text-blue-accent transition">مشروعاتنا</a></li>
+            <li><a href="#why" class="hover:text-blue-accent transition">لماذا نور</a></li>
+            <li><a href="#contact" class="hover:text-blue-accent transition">تواصل</a></li>
+          </ul>
+        </div>
+
+        <!-- col 3: follow -->
+        <div>
+          <h4 class="font-bold mb-2 text-base md:text-lg">تابعنا</h4>
+          <div class="flex items-center gap-2">
+            <a href="https://www.facebook.com/share/1YaXaVgUsX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="grid place-items-center w-9 h-9 rounded-full border border-white/20 bg-white/5 hover:bg-blue-bright transition">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+            </a>
+            <a href="https://wa.me/201003510077" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="grid place-items-center w-9 h-9 rounded-full border border-white/20 bg-white/5 hover:bg-whatsapp transition">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- col 4: contact -->
+        <div>
+          <h4 class="font-bold mb-2 text-base md:text-lg">تواصل معنا</h4>
+          <ul class="space-y-2 text-sm text-white/85">
+            <li class="flex items-center gap-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-blue-accent"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span class="num" dir="ltr">01003510077</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-blue-accent"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span class="break-all" dir="ltr">info@nour-lighting.com.eg</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-blue-accent"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              القاهرة — مصر
+            </li>
+          </ul>
+        </div>
+
+        <!-- col 5: newsletter -->
+        <div>
+          <h4 class="font-bold mb-1 text-base md:text-lg">اشترك في نشرتنا</h4>
+          <p class="text-xs text-white/70 mb-2">كن أول من يعرف آخر أخبارنا وعروضنا</p>
+          <form class="relative" onsubmit="return false;">
+            <input type="email" placeholder="البريد الإلكتروني" class="w-full bg-white/10 border border-white/15 rounded-full py-2 pr-4 pl-11 text-sm placeholder:text-white/50 focus:outline-none focus:border-blue-accent" />
+            <button type="submit" aria-label="إرسال" class="absolute left-1 top-1/2 -translate-y-1/2 grid place-items-center w-9 h-9 rounded-full grad-blue text-white glow-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-white/10 text-center text-xs text-white/60">
+        شركة نور للإضاءة الحديثة. جميع الحقوق محفوظة © 2025
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== DATA + JS ===================== -->
+  <script>
+    /* ---------- Specializations: real product categories + images from the NOUR catalog
+       (https://catalog-nour.lovable.app/ — 7 categories, Supabase-hosted real product photos) ---------- */
+    const specializations = [
+      { title: 'لوحات خطوط فقط',    img: 'https://bulukgskywmxunsbaxzq.supabase.co/storage/v1/object/public/category-images/1778416620574-___________________2K_202605101536.jpeg' },
+      { title: 'لوحات عداد فقط',    img: 'https://bulukgskywmxunsbaxzq.supabase.co/storage/v1/object/public/category-images/1778416880662-___________________2K_202605101540.jpeg' },
+      { title: 'لوحات خطوط + عداد', img: 'https://bulukgskywmxunsbaxzq.supabase.co/storage/v1/object/public/category-images/1778416233713-___________________2K_202605101530.jpeg' },
+      { title: 'لوحات سمارت',       img: 'https://bulukgskywmxunsbaxzq.supabase.co/storage/v1/object/public/category-images/1778415521791-________________________202605101516.jpeg' },
+      { title: 'لوحات اتصالات',     img: 'https://bulukgskywmxunsbaxzq.supabase.co/storage/v1/object/public/category-images/1778416461899-___________________2K_202605101534.jpeg' },
+      { title: 'بواطات',            img: 'https://bulukgskywmxunsbaxzq.supabase.co/storage/v1/object/public/category-images/1778416780738-___________________2K_202605101539.jpeg' },
+      { title: 'بواط مسمار',        img: 'https://bulukgskywmxunsbaxzq.supabase.co/storage/v1/object/public/category-images/1778417173323-___________________2K_202605101546.jpeg' },
+    ];
+
+    /* ---------- Why Nour ---------- */
+    const whyNour = [
+      { title: 'جودة عالية',        desc: 'نستخدم أفضل الخامات وأحدث تقنيات التصنيع لضمان أعلى مستويات الجودة في كل منتج.', icon: '<circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>' },
+      { title: 'حماية وأمان',       desc: 'تصميم وفق أعلى معايير السلامة والحماية الدولية لضمان موثوقية التشغيل.', icon: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>' },
+      { title: 'تصميم حسب الطلب',   desc: 'حلول مخصصة تناسب احتياجات كل عميل ومتطلبات كل مشروع.', icon: '<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/>' },
+      { title: 'دعم فني متكامل',    desc: 'فريق متخصص للدعم والاستشارات الفنية من التصميم حتى ما بعد التسليم.', icon: '<path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/>' },
+      { title: 'توصيل سريع',        desc: 'التزام صارم بالمواعيد وسرعة في التنفيذ والتسليم دون المساس بالجودة.', icon: '<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>' },
+      { title: 'خبرة +40 سنة',      desc: 'أربعون عامًا من الخبرة المتراكمة والنجاح المستمر في خدمة المشروعات.', icon: '<path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/>' },
+    ];
+
+    /* ---------- Projects: verified local images and brand marks ---------- */
+    const projects = [
+      { name: 'مشروعات شركة المرشدي للمقاولين',       sub: 'مشروعات تطوير ومقاولات في مصر',         img: './public/projects/morshedy-card.webp',  logo: './public/projects/morshedy-logo.svg',  brand: 'Morshedy' },
+      { name: 'مشروعات شركة جلوبل للمقاولين',          sub: 'مشروعات سكنية وإنشائية',                 img: './public/projects/global-card.webp',    logo: './public/projects/global-logo.png',    brand: 'Global' },
+      { name: 'مشروعات شركة طلعت مصطفى',                sub: 'مدينتي ومجتمعات عمرانية متكاملة',         img: './public/projects/tmg-card.webp',       logo: './public/projects/tmg-logo.svg',       brand: 'TMG' },
+      { name: 'مشروعات شركة جرينلاند',                  sub: 'استثمارات ومشروعات عقارية',               img: './public/projects/greenland-card.webp', logo: './public/projects/greenland-logo.png', brand: 'Green Land' },
+      { name: 'مشروعات شركة تطوير مصر',                 sub: 'بلومفيلدز — مدينة المستقبل',              img: './public/projects/tatweer-card.webp',   logo: './public/projects/tatweer-logo.svg',   brand: 'تطوير مصر' },
+      { name: 'مشروعات شركة النيل',                     sub: 'أبراج ومشروعات بالعاصمة الإدارية',         img: './public/projects/nile-card.webp',      logo: './public/projects/nile-logo.svg',      brand: 'Nile Developments' },
+      { name: 'مشروعات شركة السلام',                    sub: 'مشروعات تجارية وسكنية',                   img: './public/projects/salam-card.webp',     logo: './public/projects/salam-logo.png',     brand: 'Salam' },
+      { name: 'مشروعات شركة جيتس',                      sub: 'مجتمعات سكنية ومشروعات متكاملة',           img: './public/projects/gates-card.webp',     logo: './public/projects/gates-logo.webp',    brand: 'Gates Developments' },
+      { name: 'مشروعات شركة مدن',                       sub: 'مشروعات عمرانية بالعاصمة الإدارية',        img: './public/projects/modon-card.webp',     logo: './public/projects/modon-logo.png',     brand: 'Modon' },
+      { name: 'جميع مشاريع شركة الإسكان الاجتماعي',     sub: 'وحدات سكن لكل المصريين',                  img: './public/projects/social-card.webp',    logo: null,                                   brand: 'الإسكان الاجتماعي' },
+      { name: 'مشاريع شركة العاصمة الإدارية الجديدة',   sub: 'مشروعات الحي الحكومي وحي المال والأعمال',  img: './public/projects/capital-card.webp',   logo: null,                                   brand: 'العاصمة الإدارية' },
+      { name: 'الهيئة العامة للتطوير العمراني',       sub: 'تنمية المدن والمجتمعات العمرانية الجديدة', img: './public/projects/authority-card.webp', logo: './public/projects/authority-logo.png', brand: 'هيئة المجتمعات العمرانية' },
+    ];
+
+    /* ---------- Render specializations ---------- */
+    const specTrack = document.getElementById('specTrack');
+    specTrack.innerHTML = specializations.map(s => `
+      <div class="spec-card">
+        <div class="rounded-2xl overflow-hidden bg-navy border border-white/10 shadow-card card-anim">
+          <div class="p-5 grid place-items-center">
+            <div class="spec-box spec-glow rounded-xl overflow-hidden bg-white/5 w-full aspect-[4/3] grid place-items-center">
+              <img src="${s.img}" alt="${s.title}" loading="eager" fetchpriority="high" decoding="async" class="fade-img w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="grad-blue text-white text-center py-3 font-bold relative">
+            <span class="absolute inset-x-6 top-0 h-px bg-blue-accent/70"></span>
+            ${s.title}
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    /* ---------- Render why nour ---------- */
+    document.getElementById('whyGrid').innerHTML = whyNour.map(w => `
+      <div class="why-card card-anim h-full rounded-2xl p-5 bg-navy border border-navy-mid/60 shadow-card hover:shadow-card-hover hover:border-blue-accent/50">
+        <div class="flex h-full flex-col items-center text-center gap-3">
+          <div class="grid place-items-center w-14 h-14 rounded-2xl bg-white/[0.08] border border-white/15 text-blue-accent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7">${w.icon}</svg>
+          </div>
+          <h3 class="font-bold text-base text-white">${w.title}</h3>
+          <p class="text-xs text-white/80 leading-relaxed">${w.desc}</p>
+        </div>
+      </div>
+    `).join('');
+
+    /* ---------- Render projects ---------- */
+    document.getElementById('projGrid').innerHTML = projects.map(p => `
+      <article class="proj-card card-anim group relative bg-white rounded-2xl shadow-card overflow-hidden border-t-[3px] border-red hover:shadow-card-hover">
+        <div class="h-[180px] overflow-hidden relative bg-gray-card">
+          <img src="${p.img}" alt="${p.name}" loading="lazy" decoding="async"
+               class="fade-img w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent"></div>
+        </div>
+        <div class="p-4 flex min-h-[92px] items-center justify-between gap-3">
+          <div class="text-right min-w-0 flex-1">
+            <h3 class="font-bold text-navy text-sm md:text-[15px] leading-snug">${p.name}</h3>
+            <p class="text-xs text-text-muted mt-1 leading-relaxed">${p.sub}</p>
+          </div>
+          <span class="grid place-items-center bg-white rounded-xl shrink-0 w-[74px] h-14 px-2 py-1.5 border border-gray-card shadow-sm overflow-hidden" title="${p.brand}">
+            ${p.logo
+              ? `<img src="${p.logo}" alt="شعار ${p.brand}" loading="lazy" decoding="async" class="w-full h-full object-contain" />`
+              : `<span class="text-[11px] leading-tight font-extrabold text-navy text-center">${p.brand}</span>`}
+          </span>
+        </div>
+      </article>
+    `).join('');
+
+    /* ---------- Image fade-in on load ---------- */
+    function bindFade(img) {
+      if (img.complete && img.naturalWidth) { img.classList.add('loaded'); }
+      else { img.addEventListener('load', () => img.classList.add('loaded')); img.addEventListener('error', () => img.classList.add('loaded')); }
+    }
+    document.querySelectorAll('img.fade-img').forEach(bindFade);
+
+    /* ---------- Specialization slider navigation ---------- */
+    const prevBtn = document.getElementById('specPrev');
+    const nextBtn = document.getElementById('specNext');
+    function step() {
+      const card = specTrack.querySelector('.spec-card');
+      if (!card) return 300;
+      const gap = 22;
+      return card.getBoundingClientRect().width + gap;
+    }
+    // RTL: "previous" moves toward the start (right), "next" toward the end (left)
+    prevBtn.addEventListener('click', () => specTrack.scrollBy({ left: step(), behavior: 'smooth' }));
+    nextBtn.addEventListener('click', () => specTrack.scrollBy({ left: -step(), behavior: 'smooth' }));
+  </script>
+</body>
+</html>

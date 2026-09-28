@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "lines-only",
+    "code": "LO",
+    "nameAr": "لوحات خطوط فقط",
+    "nameEn": "Lines-Only Panels",
+    "descAr": "لوحات الخطوط بدون عداد لكافة المقاسات",
+    "descEn": "Distribution panels for circuit breakers (lines) without a meter, in all sizes.",
+    "image": "/media/products/1987bcb0-b8c8-458b-a4d4-748b799f375d-1.clean.webp"
+  },
+  {
+    "slug": "meter-only",
+    "code": "MO",
+    "nameAr": "لوحات عداد فقط",
+    "nameEn": "Meter-Only Panels",
+    "descAr": "لوحات العدادات الفردية والمتعددة للمصانع والمشاريع",
+    "descEn": "Single and multi-meter panels for buildings, factories and projects.",
+    "image": "/media/products/32e60e04-e190-4fa6-b442-fd686fd6ca47-1.clean.webp"
+  },
+  {
+    "slug": "lines-meter",
+    "code": "LM",
+    "nameAr": "لوحات خطوط + عداد",
+    "nameEn": "Lines + Meter Panels",
+    "descAr": "لوحات تحتوي على عداد وخطوط متعددة بأحجام مختلفة",
+    "descEn": "Combined panels housing an energy meter and multiple breaker lines.",
+    "image": "/media/products/8ae8f649-de0c-4312-9ab4-7581703be964-1.clean.webp"
+  },
+  {
+    "slug": "smart-panels",
+    "code": "SP",
+    "nameAr": "لوحات سمارت",
+    "nameEn": "Smart Panels",
+    "descAr": "لوحات سمارت بمقاسات مخصصة حسب طلب العميل",
+    "descEn": "Smart panels in multiple sizes, made to the client's requirements.",
+    "image": "/media/products/d23e4e32-c354-483f-a109-7028ddc42dec-1.clean.webp"
+  },
+  {
+    "slug": "communications",
+    "code": "CP",
+    "nameAr": "لوحات اتصالات",
+    "nameEn": "Communication Panels",
+    "descAr": "لوحات اتصالات أفقية ورأسية وذات وش بلاستيك",
+    "descEn": "Horizontal, vertical and plastic-front communication panels.",
+    "image": "/media/products/4329e3dc-8534-4e36-94d9-1f69ea4a64c0-1.clean.webp"
+  },
+  {
+    "slug": "junction-boxes",
+    "code": "JB",
+    "nameAr": "بواطات",
+    "nameEn": "Junction Boxes",
+    "descAr": "بواطات معدنية بمقاسات متعددة لتوزيع الأسلاك",
+    "descEn": "Metal junction boxes in multiple sizes for cable distribution.",
+    "image": "/media/products/82cbf8f3-f2dc-495f-818e-9f18daf96375-1.clean.webp"
+  },
+  {
+    "slug": "nail-boxes",
+    "code": "NB",
+    "nameAr": "بواط مسمار",
+    "nameEn": "Nail Boxes",
+    "descAr": "بواطات مسمار معدنية بأحجام متنوعة",
+    "descEn": "Metal nail-mounted boxes in a variety of sizes.",
+    "image": "/media/products/d6747c77-3037-457d-bf2f-f6a025ac452b-1.clean.webp"
+  }
+]

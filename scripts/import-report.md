@@ -1,0 +1,44 @@
+# Import report
+
+- Imported 58 products in 7 categories.
+- Prices: NOT imported (public B2B site shows no prices).
+- Possible duplicate (same category + dimensions): lo-12-h-v / lo-14-2rows
+- Possible duplicate (same category + dimensions): lo-12-omega-mobile / lo-18-omega-mobile
+- No dimension drawing: lo-18-omega-mobile
+- Possible duplicate (same category + dimensions): lo-18-3p-general / lo-24-3p
+- Possible duplicate (same category + dimensions): lo-18-3p-general / lo-24-lines
+- Slug normalized: "لوحة-عداد-مفتاح-ثنائي" -> lm-meter-double-switch
+- Possible duplicate (same category + dimensions): lm-12-outside / lm-12-inside
+- Possible duplicate (same category + dimensions): lm-14-card-charger / lm-3phase-card-general
+- Possible duplicate (same category + dimensions): lm-16-omega-fixed / lm-16-omega-mobile
+- Possible duplicate (same category + dimensions): lm-16-omega-fixed / lm-18-card-charger
+- Arabic name normalized: "لوحة 24 خط بالعداد 3 فاز كارت شحن أوميغا متحركة" -> "لوحة 24 خط بالعداد 3 فاز كارت شحن أوميجا متحركة"
+- No dimension drawing: smart-40x40
+- No dimension drawing: smart-40x60
+- No dimension drawing: smart-40x80
+- No dimension drawing: smart-60x80
+- Possible duplicate (same category + dimensions): comm-horizontal / comm-vertical
+- Possible duplicate (same category + dimensions): comm-horizontal / comm-plastic-front
+- No dimension drawing: jb-10x30x30
+- Slug normalized: "بواط-مقاس-30-50-10-سم" -> jb-10x50x30
+- Arabic name normalized: "بواط مقاس 30*50*10 سم" -> "بواط مقاس 10×50×30"
+- Slug normalized: "بواط-مقاس-30-60-10-سم" -> jb-10x60x30
+- Arabic name normalized: "بواط مقاس 30*60*10" -> "بواط مقاس 10×60×30"
+- Typo fixed ("بواب" -> "بواط"): nb-10x30x20
+- Arabic name normalized: "بواب مسمار 10×30×20" -> "بواط مسمار 10×30×20"
+- Typo fixed ("بواب" -> "بواط"): nb-10x30x30
+- Arabic name normalized: "بواب مسمار 10×30×30" -> "بواط مسمار 10×30×30"
+- Typo fixed ("بواب" -> "بواط"): nb-10x50x20
+- Arabic name normalized: "بواب مسمار 10×50×20" -> "بواط مسمار 10×50×20"
+- Typo fixed ("بواب" -> "بواط"): nb-10x60x20
+- Arabic name normalized: "بواب مسمار 10×60×20" -> "بواط مسمار 10×60×20"
+- Typo fixed ("بواب" -> "بواط"): nb-10x40x30
+- Arabic name normalized: "بواب مسمار 10×40×30" -> "بواط مسمار 10×40×30"
+- Typo fixed ("بواب" -> "بواط"): nb-10x70x20
+- Arabic name normalized: "بواب مسمار 10×70×20" -> "بواط مسمار 10×70×20"
+- Typo fixed ("بواب" -> "بواط"): nb-10x50x30
+- Arabic name normalized: "بواب مسمار 10×50×30" -> "بواط مسمار 10×50×30"
+- Typo fixed ("بواب" -> "بواط"): nb-10x60x30
+- Arabic name normalized: "بواب مسمار 10×60×30" -> "بواط مسمار 10×60×30"
+- Typo fixed ("بواب" -> "بواط"): nb-10x70x30
+- Arabic name normalized: "بواب مسمار 10×70×30" -> "بواط مسمار 10×70×30"
